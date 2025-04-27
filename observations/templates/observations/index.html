@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crime Scene Observation</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <form id="report-form" method="POST" action="{% url 'generate_report' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+            <h2>Crime Scene Observation</h2>
+
+            <label for="authority">Official Authority *</label>
+            <select id="authority" name="authority" required>
+                <option value="">Select Authority</option>
+                <option value="PI">PI</option>
+                <option value="PSI">PSI</option>
+                <option value="SP">SP</option>
+                <option value="DYSP">DYSP</option>
+            </select>
+
+            <label for="crime">Crime *</label>
+            <select id="crime" name="crime" required>
+                <option value="">Select Crime</option>
+                <option value="Accident">Accident</option>
+                <option value="Shooting">Shooting</option>
+                <option value="Murder">Murder</option>
+                <option value="Robbery">Robbery</option>
+            </select>
+
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="Enter first name">
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Enter last name">
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+            <!-- Updated for only 1 image upload -->
+            <label for="image">Upload Image *</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+
+            <button type="submit">Generate Report</button>
+        </div>
+    </form>
+
+    <!-- Including JavaScript file -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

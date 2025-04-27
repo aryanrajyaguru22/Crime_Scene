@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 40px;
+}
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+select, input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.file-input {
+    border: 2px dashed #007bff;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.uploaded-files {
+    text-align: left;
+    margin-top: 10px;
+}
+.uploaded-files ul {
+    list-style-type: none;
+    padding: 0;
+}
+.uploaded-files li {
+    display: flex;
+    justify-content: space-between;
+    background: #f1f1f1;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.remove-btn, .update-btn {
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+.remove-btn {
+    background: red;
+    color: white;
+}
+.update-btn {
+    background: green;
+    color: white;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+button:hover {
+    background-color: #0056b3;
+}
