@@ -1,14 +1,64 @@
-# 🕵️‍♂️ Crime Scene Observation System
-
-An **AI-powered Crime Scene Observation System** that leverages **image processing** and **machine learning** to automate crime scene documentation. This system minimizes human error, accelerates report generation, ensures legal accuracy, and facilitates seamless collaboration among investigators — making criminal investigations faster, more precise, and highly reliable.
-
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)](https://www.python.org/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge\&logo=opencv\&logoColor=white)](https://opencv.org/)
-[![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge\&logo=django\&logoColor=white)](https://www.djangoproject.com/)
-[![YOLOv8](https://img.shields.io/badge/YOLOv8-AI-orange?style=for-the-badge\&logo=ai\&logoColor=white)]()
-
+# Crime Scene Object Detection & Automated Report Generation
+ 
+> Custom YOLOv8 forensic object detector with NLP-powered automated reporting  
+> `Python` `YOLOv8` `OpenCV` `NLP` `PyTorch` `Object Detection`
+ 
+---
+ 
+## 🎯 Problem
+ 
+Forensic investigators manually review crime scene images to identify weapons, evidence, and suspicious items — then write reports by hand. This is slow, subjective, and creates documentation backlogs in active investigations.
+ 
+---
+ 
+## 💡 Solution
+ 
+An AI pipeline that does two things automatically:
+ 
+1. **Detects objects** in crime scene images using a custom-trained YOLOv8 model
+2. **Generates a structured forensic report** from detection results using NLP
+ 
+No manual annotation of findings. No manual report writing.
+ 
 ---
 
+## 🔬 Model Details
+ 
+### Object Detection — YOLOv8 (Custom Trained)
+- **Not a generic pretrained model** — trained specifically on forensic domain imagery
+- Detects: weapons, evidence items, suspicious objects
+- Multiple training iterations with accuracy improvements across rounds
+- Built on the YOLOv8 architecture for real-time capable inference
+ 
+### Report Generation — NLP Pipeline
+- Processes detection results (class, confidence, bounding box) into structured text
+- Outputs formatted forensic investigation reports automatically
+- Eliminates the manual documentation bottleneck for analysts
+ 
+---
+
+## 🏗️ Pipeline
+ 
+```
+Crime Scene Image
+       │
+       ▼
+┌─────────────────┐
+│  YOLOv8 Model   │  ←── Custom trained on forensic imagery
+│  (Detection)    │
+└────────┬────────┘
+         │  Detection results (objects, confidence scores, locations)
+         ▼
+┌─────────────────┐
+│  NLP Pipeline   │  ←── Converts detections to structured language
+│  (Reporting)    │
+└────────┬────────┘
+         │
+         ▼
+  Forensic Report (automated)
+```
+ 
+---
 ## 🚀 Features
 
 ✅ AI-based crime scene documentation</br >
@@ -23,35 +73,17 @@ An **AI-powered Crime Scene Observation System** that leverages **image processi
 
 ## 💻 Tech Stack
 
-### • Programming Languages:
-
-* **Python**
-* **JavaScript**
-
-### • Frameworks and Libraries:
-
-* **Pandas**
-* **NumPy**
-* **Matplotlib**
-* **Scikit-learn**
-* **TensorFlow, PyTorch**
-* **OpenCV**
-* **Flask/Django**
-* **React.js**
-
-### • Tools:
-
-* **LabelImg**, **Kaggle Notebook**, **YOLO**, **CNN**
-  
-### • API:
-
-* **OpenAI** 
-
-### • Databases:
-
-* **PostgreSQL**
+| Component | Technology |
+|---|---|
+| Object Detection | YOLOv8 · PyTorch |
+| Image Processing | OpenCV · Python |
+| Report Generation | NLP · Python |
+| Data Processing | Pandas · NumPy |
+| Visualization | Matplotlib |
+---
 
 ---
+
 
 ## 🛠️ Installation & Setup
 
@@ -88,7 +120,7 @@ An **AI-powered Crime Scene Observation System** that leverages **image processi
 ---
 
 
-## 📸 Screenshots
+## 📊 Sample Output
 
 ![dashboard](assets/dashboard.png)<br />
 ![report](assets/report.png)<br />
